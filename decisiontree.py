@@ -9,11 +9,11 @@ from datasets import load_training_data,load_test_data
 from preprocessing import fill_missing_values
 
 """ get training data """
-Xtr,Ytr=load_training_data("data/training.json")
+Xtr,Ytr=load_training_data("training-and-test/training.json")
 Xtr=fill_missing_values(Xtr)
 
 """ get test data """
-Xte,Yte=load_test_data("data/sample-test.in.json","data/sample-test.out.json")
+Xte,Yte=load_test_data("training-and-test/sample-test.in.json","training-and-test/sample-test.out.json")
 Xte=fill_missing_values(Xte)
 
 """training"""
