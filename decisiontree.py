@@ -21,6 +21,10 @@ from sklearn.tree import DecisionTreeClassifier
 learner = DecisionTreeClassifier(max_depth=7,random_state=0).fit(Xtr, Ytr)
 
 """predicting"""
+label_test = learner.predict(Xte)
+print(label_test)
+
+print('Accuracy is ', accuracy_score(Yte,label_test)*100)
 print(learner.score(Xtr,Ytr))
 print(learner.score(Xte,Yte))
 
